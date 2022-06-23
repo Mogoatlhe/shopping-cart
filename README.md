@@ -16,7 +16,7 @@ An online shopping store created in `ReactJS`.
 - [ ] use the React Testing Library
 - [ ] use the React Router to manage page changes
 
-# Desgin
+# Design
 
 ## Homepage
 
