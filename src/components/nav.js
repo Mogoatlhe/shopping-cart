@@ -1,10 +1,16 @@
 import { Link } from "react-router-dom";
+import "../style/nav.css";
 
 const Nav = () => {
+
+  const setActive = () => {
+
+  }
+
   return (
     <nav>
-      <Link to="/">HOME</Link>
-      <Link to="shop">SHOP</Link>
+      <Link to="/" className = "link active" onClick = { setActive }>HOME</Link>
+      <Link to="shop" className = "link" onClick = { setActive }>SHOP</Link>
     </nav>
   );
 };

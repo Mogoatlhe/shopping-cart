@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Style+Script&family=Uchen&display=swap');
+
+:root {
+  --uchen: 'Uchen', serif;
+  --styleScript: 'Style Script', cursive;
+  --jet: rgb(51, 48, 48);
+  --celadon: rgb(152, 223, 175);
+  --tea-green: rgb(222, 239, 183);
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  max-width: 100vw;
+  height: 100vh;
+  font-family: var(--ultra);
+}
+
+.container {
+  display: flex;
+}
+
+nav{
+  background-color: var(--jet);
+}
+
+.active{
+  color: var(--celadon);
+}
+
+.link:not(.active){
+  color: white;
+}
+
+.link:not(.active):hover{
+  color: var(--tea-green);
+}
