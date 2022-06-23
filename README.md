@@ -18,6 +18,10 @@ An online shopping store created in `ReactJS`.
 
 # Desgin
 
+## Homepage
+
+![](./design/design-homepage.png)
+
 # Preview
 
 # Installation Instructions
