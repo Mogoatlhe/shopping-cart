@@ -30,3 +30,7 @@ An online shopping store created in `ReactJS`.
 - Open the the `shopping-cart` folder
 - Run `npm start` from your terminal
   - If your browser does not open automatically paste http://localhost:3000 in the address bar of your browser and press Enter
+
+# Credits
+
+- homepage image: https://unsplash.com/photos/AZTpFmYBzzs
