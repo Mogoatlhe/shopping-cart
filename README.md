@@ -35,3 +35,4 @@ An online shopping store created in `ReactJS`.
 # Credits
 
 - homepage image: https://unsplash.com/photos/AZTpFmYBzzs
+- favicon image: https://www.californian.co.za/wp-content/uploads/2020/11/A80-LEATHER-ALL-STAR-132173C-WHITE1.png
