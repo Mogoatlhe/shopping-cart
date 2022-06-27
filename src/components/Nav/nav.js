@@ -13,6 +13,9 @@ const Nav = ({ page }) => {
     } else if (page === "shop") {
       setHomeClass("");
       setShopClass("active");
+    } else {
+      setHomeClass("");
+      setShopClass("");
     }
   });
 

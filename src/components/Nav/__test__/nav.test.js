@@ -45,9 +45,9 @@ it("resets home link when unactive", () => {
 it("sets both nav links to unactive when a none existing one is selected", () => {
   render(
     <BrowserRouter>
-      <Nav page={"random-page"} />
+      <Nav page={"not-found"} />
     </BrowserRouter>
   );
-  const homeLinks = screen.getAllByRole("link");
-  homeLinks.forEach((homeLink) => expect(homeLink.className).toBe("link "));
+  const navLinks = screen.getAllByRole("link");
+  navLinks.forEach((navLink) => expect(navLink.className).toBe("link "));
 });
