@@ -32,6 +32,30 @@ An online shopping store created in `ReactJS`.
 - Run `npm start` from your terminal
   - If your browser does not open automatically paste http://localhost:3000 in the address bar of your browser and press Enter
 
+## Lessons Learnt
+
+- `useHref() may be used only in the context of a Router component`
+
+  - When trying to render the nav component in my tests I ran into the above error, resulting in my tests failing.
+  - After a brief research I learnt that the above error meant that all components that use the `Link` component need to be rendered only within the Router context. Even in tests.
+  - problem:
+    ```js
+    render(<Nav page={"home"} />);
+    ```
+  - solution:
+
+    ```js
+    import { BrowserRouter } from "react-router-dom";
+
+    ...
+
+    render(
+    <BrowserRouter>
+      <Nav page={"home"} />
+    </BrowserRouter>
+    );
+    ```
+
 ## Credits
 
 - homepage image: https://unsplash.com/photos/AZTpFmYBzzs
