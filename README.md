@@ -16,6 +16,11 @@ An online shopping store created in `ReactJS`.
 - [ ] use the React Testing Library
 - [ ] use the React Router to manage page changes
 
+## Additional Features
+
+- [ ] create the not found page
+  - [x] let all the other invalid /urls lead to the not found page
+
 ## Design
 
 ### Homepage
