@@ -14,15 +14,6 @@ const Nav = ({ page }) => {
       setHomeClass("");
       setShopClass("active");
     }
-    // set the active class to the nav link of the current page
-    // get the current url
-    // compare url link text content
-    // if match is current, return
-    // else if match exists, but not current
-    // set active to the matching nav link
-    // remove it from sibling
-    // else
-    // remove it
   });
 
   return (
