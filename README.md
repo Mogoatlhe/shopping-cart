@@ -16,15 +16,15 @@ An online shopping store created in `ReactJS`.
 - [ ] use the React Testing Library
 - [ ] use the React Router to manage page changes
 
-# Design
+## Design
 
-## Homepage
+### Homepage
 
 ![](./design/design-homepage.png)
 
-# Preview
+## Preview
 
-# Installation Instructions
+## Installation Instructions
 
 - Clone the repo
 - Open the the `shopping-cart` folder
@@ -32,7 +32,7 @@ An online shopping store created in `ReactJS`.
 - Run `npm start` from your terminal
   - If your browser does not open automatically paste http://localhost:3000 in the address bar of your browser and press Enter
 
-# Credits
+## Credits
 
 - homepage image: https://unsplash.com/photos/AZTpFmYBzzs
 - favicon image: https://www.californian.co.za/wp-content/uploads/2020/11/A80-LEATHER-ALL-STAR-132173C-WHITE1.png
