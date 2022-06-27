@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "../../style/nav.css";
 
-const Nav = () => {
+const Nav = ({ page }) => {
   const [homeClass, setHomeClass] = useState("");
   const [shopClass, setShopClass] = useState("");
 
