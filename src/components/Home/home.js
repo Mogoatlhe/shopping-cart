@@ -1,9 +1,9 @@
 import Brief from "./brief";
-import Nav from "./nav";
+import Nav from "../Nav/nav";
 
 const Home = () => {
   return (
-    <div id="home-container" className = "container">
+    <div id="home-container" className="container">
       <Nav />
       <Brief />
     </div>
