@@ -10,6 +10,9 @@ const Nav = ({ page }) => {
     if (page === "home") {
       setHomeClass("active");
       setShopClass("");
+    } else if (page === "shop") {
+      setHomeClass("");
+      setShopClass("active");
     }
     // set the active class to the nav link of the current page
     // get the current url
