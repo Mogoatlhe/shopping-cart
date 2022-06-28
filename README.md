@@ -14,12 +14,13 @@ An online shopping store created in `ReactJS`.
   - [ ] add an "add to cart" button
 - [ ] once the user has submitted their order the amount on the cart itself should adjust (i.e clear / reset cart).
 - [ ] use the React Testing Library
-- [ ] use the React Router to manage page changes
+- [x] use the React Router to manage page changes
 
 ## Additional Features
 
 - [ ] create the not found page
   - [x] let all the other invalid /urls lead to the not found page
+- [x] fetch data from an API.
 
 ## Design
 
