@@ -9,7 +9,7 @@ it("sets home link class name to 'active'", () => {
     </BrowserRouter>
   );
   const homeLink = screen.getByText(/home/i);
-  expect(homeLink.className).toBe("link active");
+  expect(homeLink).toHaveClass("active");
 });
 
 it("resets shop link when unactive", () => {
@@ -19,7 +19,7 @@ it("resets shop link when unactive", () => {
     </BrowserRouter>
   );
   const shopLink = screen.getByText(/shop/i);
-  expect(shopLink.className).toBe("link ");
+  expect(shopLink).not.toHaveClass("active");
 });
 
 it("sets shop link class name to 'active'", () => {
@@ -29,7 +29,7 @@ it("sets shop link class name to 'active'", () => {
     </BrowserRouter>
   );
   const shopLink = screen.getByText(/shop/i);
-  expect(shopLink.className).toBe("link active");
+  expect(shopLink).toHaveClass("active");
 });
 
 it("resets home link when unactive", () => {
@@ -39,7 +39,7 @@ it("resets home link when unactive", () => {
     </BrowserRouter>
   );
   const homeLink = screen.getByText(/home/i);
-  expect(homeLink.className).toBe("link ");
+  expect(homeLink).not.toHaveClass("active");
 });
 
 it("sets both nav links to unactive when a none existing one is selected", () => {
@@ -49,5 +49,5 @@ it("sets both nav links to unactive when a none existing one is selected", () =>
     </BrowserRouter>
   );
   const navLinks = screen.getAllByRole("link");
-  navLinks.forEach((navLink) => expect(navLink.className).toBe("link "));
+  navLinks.forEach((navLink) => expect(navLink).not.toHaveClass("active"));
 });
