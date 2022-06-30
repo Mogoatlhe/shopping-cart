@@ -15,11 +15,12 @@ const Product = ({ shoeData }) => {
   const decrementCartCount = (e) => {
     const removeFromCartButton = e.target;
     const count = removeFromCartButton.previousSibling;
-    const add = count.previousSibling;
+
     if (cartCount === 0) {
       return;
     } else if (cartCount === 1) {
       count.classList.add("hidden");
+      removeFromCartButton.classList.add("hidden");
     }
     setCartCount(cartCount - 1);
   };
