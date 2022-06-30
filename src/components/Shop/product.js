@@ -26,8 +26,11 @@ const Product = ({ shoeData }) => {
         <button className="add-to-cart" onClick={incrementCartCount}>
           +
         </button>
-        <div className="cart-count">{cartCount}</div>
-        <button className="remove-from-cart" onClick={decrementCartCount}>
+        <p className="cart-count hidden">{cartCount}</p>
+        <button
+          className="remove-from-cart hidden"
+          onClick={decrementCartCount}
+        >
           -
         </button>
       </div>
