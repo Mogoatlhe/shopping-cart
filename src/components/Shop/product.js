@@ -3,7 +3,10 @@ import { useState } from "react";
 const Product = ({ shoeData }) => {
   const [cartCount, setCartCount] = useState(0);
 
-  const incrementCartCount = () => {
+  const incrementCartCount = (e) => {
+    const add = e.target;
+    const count = add.nextSibling;
+    count.classList.remove("hidden");
     setCartCount(cartCount + 1);
   };
 
