@@ -23,6 +23,21 @@ it("hides cart-count value", () => {
   expect(cartCountValue).toHaveClass("hidden");
 });
 
+it("hides cart-count value when count is 0", () => {
+  render(
+    <BrowserRouter>
+      <Product shoeData={mockedShoeData} />
+    </BrowserRouter>
+  );
+
+  const addToCartButton = screen.getByText("+");
+  fireEvent.click(addToCartButton);
+  const removeFromCartButton = screen.getByText("-");
+  fireEvent.click(removeFromCartButton);
+  const cartCountValue = screen.getByText("0");
+  expect(cartCountValue).toHaveClass("hidden");
+});
+
 it("hides remove from cart button", () => {
   render(
     <BrowserRouter>
