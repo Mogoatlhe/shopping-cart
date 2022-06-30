@@ -6,7 +6,9 @@ const Product = ({ shoeData }) => {
   const incrementCartCount = (e) => {
     const add = e.target;
     const count = add.nextSibling;
+    const removeFromCartButton = count.nextSibling;
     count.classList.remove("hidden");
+    removeFromCartButton.classList.remove("hidden");
     setCartCount(cartCount + 1);
   };
 
