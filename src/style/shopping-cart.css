@@ -6,6 +6,7 @@
   --jet: rgb(51, 48, 48);
   --celadon: rgb(152, 223, 175);
   --tea-green: rgb(222, 239, 183);
+  --cedar-chest: rgb(208, 90, 76);
 }
 
 html {
@@ -124,5 +125,43 @@ span{
   float: right;
   font-weight: bolder;
   padding-left: 3%;
+}
+
+.product-cart-container{
+  display: flex;
+  width: 16vw;
+  justify-content: end;
+}
+
+.product-cart-container *{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3.5vh;
+}
+
+button{
+  font-size: 1.2rem;
+  border: none;
+  color: white;
+  width: 1.5vw;
+}
+
+button:hover{
+  cursor: pointer;
+}
+
+.add-to-cart{
+  background-color: var(--celadon);
+}
+
+.remove-from-cart{
+  display: none;
+  background-color: var(--cedar-chest);
+}
+
+.cart-count{
+  display: none;
+  width: 3vw;
 }
 /* https: //www.google.com/imgres?imgurl=http%3A%2F%2F25.media.tumblr.com%2F06e4f035b3982b24550f01494249b2a2%2Ftumblr_n18r1t1TZz1tpegqko1_400.gif&imgrefurl=https%3A%2F%2Fwifflegif.com%2Ftags%2F46809-all-star-gifs%3Fpage%3D3&tbnid=rW3ANncm3WHGHM&vet=10CB4QxiAoBWoXChMIkMfwz97U-AIVAAAAAB0AAAAAEAs..i&docid=YSdEKa_P4f1qPM&w=400&h=258&itg=1&q=sneakers%20walking%20gif&ved=0CB4QxiAoBWoXChMIkMfwz97U-AIVAAAAAB0AAAAAEAs#imgrc=KpibYE5l51oZxM&imgdii=vHInGamn173kcM */
