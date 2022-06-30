@@ -28,6 +28,16 @@ An online shopping store created in `ReactJS`.
 
 ![](./design/design-homepage.png)
 
+### Shop page
+
+#### Empty cart
+
+![](./design/design-shop-page-empty-cart.png)
+
+#### Items in cart ( + scroll)
+
+![](./design/design-shop-page-nonempty-cart.png)
+
 ## prototype
 
 - Get an idea of how the finished product is ment to work
