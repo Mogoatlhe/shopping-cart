@@ -12,9 +12,14 @@ const Product = ({ shoeData }) => {
     setCartCount(cartCount + 1);
   };
 
-  const decrementCartCount = () => {
+  const decrementCartCount = (e) => {
+    const removeFromCartButton = e.target;
+    const count = removeFromCartButton.previousSibling;
+    const add = count.previousSibling;
     if (cartCount === 0) {
       return;
+    } else if (cartCount === 1) {
+      count.classList.add("hidden");
     }
     setCartCount(cartCount - 1);
   };
