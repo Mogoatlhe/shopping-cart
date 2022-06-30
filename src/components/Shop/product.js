@@ -13,6 +13,9 @@ const Product = ({ shoeData }) => {
   };
 
   const decrementCartCount = () => {
+    if (cartCount === 0) {
+      return;
+    }
     setCartCount(cartCount - 1);
   };
 
