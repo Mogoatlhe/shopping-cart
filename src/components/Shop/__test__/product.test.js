@@ -59,3 +59,20 @@ it("shows remove from cart button", () => {
   const removeFromCartButton = screen.getByText("-");
   expect(removeFromCartButton).not.toHaveClass("hidden");
 });
+
+it("prevents reducing count when count is 0", () => {
+  render(
+    <BrowserRouter>
+      <Product shoeData={mockedShoeData} />
+    </BrowserRouter>
+  );
+
+  const addToCartButton = screen.getByText("+");
+  fireEvent.click(addToCartButton);
+  const removeFromCartButton = screen.getByText("-");
+  fireEvent.click(removeFromCartButton);
+  fireEvent.click(removeFromCartButton);
+  fireEvent.click(removeFromCartButton);
+  const cartCountValue = screen.getByText("0");
+  expect(cartCountValue).toHaveTextContent("0");
+});
