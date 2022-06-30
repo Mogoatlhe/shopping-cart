@@ -28,13 +28,11 @@ An online shopping store created in `ReactJS`.
 
 ![](./design/design-homepage.png)
 
-### Shop page
-
-#### Empty cart
+### Shop page - Empty cart
 
 ![](./design/design-shop-page-empty-cart.png)
 
-#### Items in cart ( + scroll)
+### Shop page - Items in cart ( + scroll)
 
 ![](./design/design-shop-page-nonempty-cart.png)
 
@@ -81,4 +79,4 @@ An online shopping store created in `ReactJS`.
 
 - homepage image: https://unsplash.com/photos/AZTpFmYBzzs
 - favicon image: https://www.californian.co.za/wp-content/uploads/2020/11/A80-LEATHER-ALL-STAR-132173C-WHITE1.png
-- product images: https://superbalist.com/brands/converse/men/shoes, all the product information is fetched the preceding link and can be bought there.
+- product images: https://superbalist.com/brands/converse/men/shoes, all the product information is fetched from the preceding link and can be bought there.
