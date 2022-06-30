@@ -46,3 +46,16 @@ it("shows cart-count value", () => {
   const cartCountValue = screen.getByText("1");
   expect(cartCountValue).not.toHaveClass("hidden");
 });
+
+it("shows remove from cart button", () => {
+  render(
+    <BrowserRouter>
+      <Product shoeData={mockedShoeData} />
+    </BrowserRouter>
+  );
+
+  const addToCartButton = screen.getByText("+");
+  fireEvent.click(addToCartButton);
+  const removeFromCartButton = screen.getByText("-");
+  expect(removeFromCartButton).not.toHaveClass("hidden");
+});
