@@ -10,8 +10,8 @@ An online shopping store created in `ReactJS`.
     - [ ] include a shopping cart
       - [ ] display the number of items currently in the shopping cart.
     - [ ] have a button to go the shopping cart to checkout and pay
-- [ ] build individual cards for each product
-  - [ ] add an "add to cart" button
+- [x] build individual cards for each product
+  - [x] add an "add to cart" button
 - [ ] once the user has submitted their order the amount on the cart itself should adjust (i.e clear / reset cart).
 - [ ] use the React Testing Library
 - [x] use the React Router to manage page changes
