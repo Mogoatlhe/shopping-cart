@@ -1,5 +1,4 @@
 import { render, screen, fireEvent } from "@testing-library/react";
-import { BrowserRouter } from "react-router-dom";
 import Product from "../product";
 
 const mockedShoeData = {
@@ -13,22 +12,14 @@ const mockedShoeData = {
 };
 
 it("hides cart-count value", () => {
-  render(
-    <BrowserRouter>
-      <Product shoeData={mockedShoeData} />
-    </BrowserRouter>
-  );
+  render(<Product shoeData={mockedShoeData} />);
 
   const cartCountValue = screen.getByText("0");
   expect(cartCountValue).toHaveClass("hidden");
 });
 
 it("hides cart-count value when count is 0", () => {
-  render(
-    <BrowserRouter>
-      <Product shoeData={mockedShoeData} />
-    </BrowserRouter>
-  );
+  render(<Product shoeData={mockedShoeData} />);
 
   const addToCartButton = screen.getByText("+");
   fireEvent.click(addToCartButton);
@@ -39,11 +30,7 @@ it("hides cart-count value when count is 0", () => {
 });
 
 it("hides remove from cart button when count is 0", () => {
-  render(
-    <BrowserRouter>
-      <Product shoeData={mockedShoeData} />
-    </BrowserRouter>
-  );
+  render(<Product shoeData={mockedShoeData} />);
 
   const addToCartButton = screen.getByText("+");
   fireEvent.click(addToCartButton);
@@ -53,22 +40,14 @@ it("hides remove from cart button when count is 0", () => {
 });
 
 it("hides remove from cart button", () => {
-  render(
-    <BrowserRouter>
-      <Product shoeData={mockedShoeData} />
-    </BrowserRouter>
-  );
+  render(<Product shoeData={mockedShoeData} />);
 
   const removeFromCartButton = screen.getByText("-");
   expect(removeFromCartButton).toHaveClass("hidden");
 });
 
 it("shows cart-count value", () => {
-  render(
-    <BrowserRouter>
-      <Product shoeData={mockedShoeData} />
-    </BrowserRouter>
-  );
+  render(<Product shoeData={mockedShoeData} />);
 
   const addToCartButton = screen.getByText("+");
   fireEvent.click(addToCartButton);
@@ -77,11 +56,7 @@ it("shows cart-count value", () => {
 });
 
 it("shows remove from cart button", () => {
-  render(
-    <BrowserRouter>
-      <Product shoeData={mockedShoeData} />
-    </BrowserRouter>
-  );
+  render(<Product shoeData={mockedShoeData} />);
 
   const addToCartButton = screen.getByText("+");
   fireEvent.click(addToCartButton);
@@ -90,11 +65,7 @@ it("shows remove from cart button", () => {
 });
 
 it("prevents reducing count when count is 0", () => {
-  render(
-    <BrowserRouter>
-      <Product shoeData={mockedShoeData} />
-    </BrowserRouter>
-  );
+  render(<Product shoeData={mockedShoeData} />);
 
   const addToCartButton = screen.getByText("+");
   fireEvent.click(addToCartButton);
