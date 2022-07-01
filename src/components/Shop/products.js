@@ -31,15 +31,14 @@ const Products = ({ totalCartItems, updateCartItems }) => {
   fetchData();
 
   const displayProducts = () => {
-    const products = [];
-    productsData.map((productData) => {
+    const products = productsData.map((productData) => {
       const shoeData = {
         name: productData.short_name,
         price: productData.price_range.min.price,
         assets: productData.assets,
       };
 
-      return products.push(<Product key={uniqid()} shoeData={shoeData} />);
+      return <Product key={uniqid()} shoeData={shoeData} />;
     });
 
     return products;
