@@ -181,7 +181,7 @@ button:hover{
 #cart-container *{
   height: 100%;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
   gap: 1%;
   font-size: 1.2rem;
