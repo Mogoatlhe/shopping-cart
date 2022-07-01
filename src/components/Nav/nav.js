@@ -24,7 +24,7 @@ const Nav = ({ page }) => {
       <Link to="/" className={`link ${homeClass}`}>
         HOME
       </Link>
-      <Link to="shop" className={`link ${shopClass}`}>
+      <Link to="/shop" className={`link ${shopClass}`}>
         SHOP
       </Link>
     </nav>
