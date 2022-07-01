@@ -90,6 +90,7 @@ nav{
 #products-container{
   width: 60vw;
   margin-left: 40vw;
+  margin-top: 8vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -171,8 +172,22 @@ button:hover{
 
 #cart-container{
   position: fixed;
-  width: 60vw;
+  top: 0;
+  width: 57vw;
   height: 7vh;
   background-color: white;
+}
+
+#cart-container *{
+  height: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 1%;
+  font-size: 1.2rem;
+}
+
+#cart-container *:hover{
+  cursor: pointer;
 }
 /* https: //www.google.com/imgres?imgurl=http%3A%2F%2F25.media.tumblr.com%2F06e4f035b3982b24550f01494249b2a2%2Ftumblr_n18r1t1TZz1tpegqko1_400.gif&imgrefurl=https%3A%2F%2Fwifflegif.com%2Ftags%2F46809-all-star-gifs%3Fpage%3D3&tbnid=rW3ANncm3WHGHM&vet=10CB4QxiAoBWoXChMIkMfwz97U-AIVAAAAAB0AAAAAEAs..i&docid=YSdEKa_P4f1qPM&w=400&h=258&itg=1&q=sneakers%20walking%20gif&ved=0CB4QxiAoBWoXChMIkMfwz97U-AIVAAAAAB0AAAAAEAs#imgrc=KpibYE5l51oZxM&imgdii=vHInGamn173kcM */
