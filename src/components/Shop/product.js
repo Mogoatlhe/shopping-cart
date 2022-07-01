@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Product = ({ shoeData }) => {
+const Product = ({ shoeData, updateCartItems }) => {
   const [cartCount, setCartCount] = useState(0);
 
   const incrementCartCount = (e) => {
@@ -10,6 +10,7 @@ const Product = ({ shoeData }) => {
     count.classList.remove("hidden");
     removeFromCartButton.classList.remove("hidden");
     setCartCount(cartCount + 1);
+    updateCartItems("increment");
   };
 
   const decrementCartCount = (e) => {
@@ -22,6 +23,7 @@ const Product = ({ shoeData }) => {
       count.classList.add("hidden");
       removeFromCartButton.classList.add("hidden");
     }
+    updateCartItems("decrement");
     setCartCount(cartCount - 1);
   };
 

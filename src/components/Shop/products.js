@@ -3,9 +3,17 @@ import uniqid from "uniqid";
 import Cart from "./cart";
 import Product from "./product";
 
-const Products = ({ totalCartItems, updateCartItems }) => {
+const Products = () => {
   const [productsData, setProductsData] = useState([]);
+  const [totalCartItems, setTotalCartItems] = useState(0);
+
   let imageLink = `http://assets.superbalistcdn.co.za/`;
+
+  const updateCartItems = (operation) => {
+    const newTotal =
+      operation === "increment" ? totalCartItems + 1 : totalCartItems - 1;
+    setTotalCartItems(newTotal);
+  };
 
   const changeBaseUrl = (response) => {
     return response.search.data.map((data) => {
@@ -38,7 +46,13 @@ const Products = ({ totalCartItems, updateCartItems }) => {
         assets: productData.assets,
       };
 
-      return <Product key={uniqid()} shoeData={shoeData} />;
+      return (
+        <Product
+          key={uniqid()}
+          shoeData={shoeData}
+          updateCartItems={updateCartItems}
+        />
+      );
     });
 
     return products;
