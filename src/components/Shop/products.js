@@ -1,5 +1,6 @@
 import { useState } from "react";
 import uniqid from "uniqid";
+import Cart from "./cart";
 import Product from "./product";
 
 const Products = ({ totalCartItems, updateCartItems }) => {
@@ -46,6 +47,7 @@ const Products = ({ totalCartItems, updateCartItems }) => {
 
   return (
     <div id="products-container">
+      <Cart />
       {displayProducts().map((product) => product)}
     </div>
   );
