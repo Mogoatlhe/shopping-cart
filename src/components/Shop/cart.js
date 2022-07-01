@@ -5,7 +5,7 @@ const Cart = ({ totalCartItems }) => {
     <div id="cart-container">
       <div>
         <HiOutlineShoppingCart />
-        <p>( {totalCartItems} )</p>
+        <p data-testid="cart-items-total">( {totalCartItems} )</p>
       </div>
     </div>
   );
