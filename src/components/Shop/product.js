@@ -2,28 +2,21 @@ import { useState } from "react";
 
 const Product = ({ shoeData, updateCartItems }) => {
   const [cartCount, setCartCount] = useState(0);
+  const [hidden, setHidden] = useState("hidden");
 
-  const incrementCartCount = (e) => {
-    const add = e.target;
-    const count = add.nextSibling;
-    const removeFromCartButton = count.nextSibling;
-    count.classList.remove("hidden");
-    removeFromCartButton.classList.remove("hidden");
+  const incrementCartCount = () => {
+    setHidden("");
     setCartCount(cartCount + 1);
-    updateCartItems("increment");
+    // updateCartItems("increment");
   };
 
-  const decrementCartCount = (e) => {
-    const removeFromCartButton = e.target;
-    const count = removeFromCartButton.previousSibling;
-
+  const decrementCartCount = () => {
     if (cartCount === 0) {
       return;
     } else if (cartCount === 1) {
-      count.classList.add("hidden");
-      removeFromCartButton.classList.add("hidden");
+      setHidden("hidden");
     }
-    updateCartItems("decrement");
+    // updateCartItems("decrement");
     setCartCount(cartCount - 1);
   };
 
@@ -42,9 +35,9 @@ const Product = ({ shoeData, updateCartItems }) => {
         <button className="add-to-cart" onClick={incrementCartCount}>
           +
         </button>
-        <p className="cart-count hidden">{cartCount}</p>
+        <p className={`cart-count ${hidden}`}>{cartCount}</p>
         <button
-          className="remove-from-cart hidden"
+          className={`remove-from-cart ${hidden}`}
           onClick={decrementCartCount}
         >
           -
