@@ -11,15 +11,27 @@ const mockedShoeData = {
   ],
 };
 
+const mockedUpdateCartItems = jest.fn();
+
 it("hides cart-count value", () => {
-  render(<Product shoeData={mockedShoeData} />);
+  render(
+    <Product
+      shoeData={mockedShoeData}
+      updateCartItems={mockedUpdateCartItems}
+    />
+  );
 
   const cartCountValue = screen.getByText("0");
   expect(cartCountValue).toHaveClass("hidden");
 });
 
 it("hides cart-count value when count is 0", () => {
-  render(<Product shoeData={mockedShoeData} />);
+  render(
+    <Product
+      shoeData={mockedShoeData}
+      updateCartItems={mockedUpdateCartItems}
+    />
+  );
 
   const addToCartButton = screen.getByText("+");
   fireEvent.click(addToCartButton);
@@ -30,7 +42,12 @@ it("hides cart-count value when count is 0", () => {
 });
 
 it("hides remove from cart button when count is 0", () => {
-  render(<Product shoeData={mockedShoeData} />);
+  render(
+    <Product
+      shoeData={mockedShoeData}
+      updateCartItems={mockedUpdateCartItems}
+    />
+  );
 
   const addToCartButton = screen.getByText("+");
   fireEvent.click(addToCartButton);
@@ -40,14 +57,24 @@ it("hides remove from cart button when count is 0", () => {
 });
 
 it("hides remove from cart button", () => {
-  render(<Product shoeData={mockedShoeData} />);
+  render(
+    <Product
+      shoeData={mockedShoeData}
+      updateCartItems={mockedUpdateCartItems}
+    />
+  );
 
   const removeFromCartButton = screen.getByText("-");
   expect(removeFromCartButton).toHaveClass("hidden");
 });
 
 it("shows cart-count value", () => {
-  render(<Product shoeData={mockedShoeData} />);
+  render(
+    <Product
+      shoeData={mockedShoeData}
+      updateCartItems={mockedUpdateCartItems}
+    />
+  );
 
   const addToCartButton = screen.getByText("+");
   fireEvent.click(addToCartButton);
@@ -56,7 +83,12 @@ it("shows cart-count value", () => {
 });
 
 it("shows remove from cart button", () => {
-  render(<Product shoeData={mockedShoeData} />);
+  render(
+    <Product
+      shoeData={mockedShoeData}
+      updateCartItems={mockedUpdateCartItems}
+    />
+  );
 
   const addToCartButton = screen.getByText("+");
   fireEvent.click(addToCartButton);
@@ -65,7 +97,12 @@ it("shows remove from cart button", () => {
 });
 
 it("prevents reducing count when count is 0", () => {
-  render(<Product shoeData={mockedShoeData} />);
+  render(
+    <Product
+      shoeData={mockedShoeData}
+      updateCartItems={mockedUpdateCartItems}
+    />
+  );
 
   const addToCartButton = screen.getByText("+");
   fireEvent.click(addToCartButton);
