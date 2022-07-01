@@ -58,7 +58,7 @@ describe("initial cart items total value", () => {
 });
 
 describe("update cart items total value", () => {
-  it("test initial cart item state", async () => {
+  it("update cart item count value", async () => {
     render(<Products totalCartItems={0} />);
 
     // eslint-disable-next-line testing-library/prefer-find-by
