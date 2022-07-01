@@ -47,7 +47,7 @@ const Products = ({ totalCartItems, updateCartItems }) => {
 
   return (
     <div id="products-container">
-      <Cart />
+      <Cart totalCartItems={totalCartItems} />
       {displayProducts().map((product) => product)}
     </div>
   );
