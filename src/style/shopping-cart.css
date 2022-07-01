@@ -133,7 +133,7 @@ span{
 .product-cart-container{
   display: flex;
   width: 16vw;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .product-cart-container *{
