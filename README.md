@@ -8,7 +8,7 @@ An online shopping store created in `ReactJS`.
   - [x] homepage
   - [ ] shopping page, must:
     - [ ] include a shopping cart
-      - [ ] display the number of items currently in the shopping cart.
+      - [x] display the number of items currently in the shopping cart.
     - [ ] have a button to go the shopping cart to checkout and pay
 - [x] build individual cards for each product
   - [x] add an "add to cart" button
