@@ -37,6 +37,10 @@ An online shopping store created in `ReactJS`.
 
 ![](./design/design-shop-page-nonempty-cart.png)
 
+### Checkout page
+
+![](./design/design-checkout-page.png)
+
 ## prototype
 
 - Get an idea of how the finished product is ment to work
