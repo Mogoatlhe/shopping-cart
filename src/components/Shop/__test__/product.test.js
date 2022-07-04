@@ -11,13 +11,18 @@ const mockedShoeData = {
   ],
 };
 
-const mockedUpdateCartItems = jest.fn();
+const mockedTotal = {
+  current: 0,
+};
+
+const mockedSetTotalCartItems = jest.fn();
 
 it("hides cart-count value", () => {
   render(
     <Product
       shoeData={mockedShoeData}
-      updateCartItems={mockedUpdateCartItems}
+      setTotalCartItems={mockedSetTotalCartItems}
+      total={mockedTotal}
     />
   );
 
@@ -29,7 +34,8 @@ it("hides cart-count value when count is 0", () => {
   render(
     <Product
       shoeData={mockedShoeData}
-      updateCartItems={mockedUpdateCartItems}
+      setTotalCartItems={mockedSetTotalCartItems}
+      total={mockedTotal}
     />
   );
 
@@ -45,7 +51,8 @@ it("hides remove from cart button when count is 0", () => {
   render(
     <Product
       shoeData={mockedShoeData}
-      updateCartItems={mockedUpdateCartItems}
+      setTotalCartItems={mockedSetTotalCartItems}
+      total={mockedTotal}
     />
   );
 
@@ -60,7 +67,8 @@ it("hides remove from cart button", () => {
   render(
     <Product
       shoeData={mockedShoeData}
-      updateCartItems={mockedUpdateCartItems}
+      setTotalCartItems={mockedSetTotalCartItems}
+      total={mockedTotal}
     />
   );
 
@@ -72,7 +80,8 @@ it("shows cart-count value", () => {
   render(
     <Product
       shoeData={mockedShoeData}
-      updateCartItems={mockedUpdateCartItems}
+      setTotalCartItems={mockedSetTotalCartItems}
+      total={mockedTotal}
     />
   );
 
@@ -86,7 +95,8 @@ it("shows remove from cart button", () => {
   render(
     <Product
       shoeData={mockedShoeData}
-      updateCartItems={mockedUpdateCartItems}
+      setTotalCartItems={mockedSetTotalCartItems}
+      total={mockedTotal}
     />
   );
 
@@ -100,7 +110,8 @@ it("prevents reducing count when count is 0", () => {
   render(
     <Product
       shoeData={mockedShoeData}
-      updateCartItems={mockedUpdateCartItems}
+      setTotalCartItems={mockedSetTotalCartItems}
+      total={mockedTotal}
     />
   );
 
