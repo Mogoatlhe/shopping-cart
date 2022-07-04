@@ -32,24 +32,25 @@ const Products = () => {
       if (productsData.length === 0) setProductsData(data);
     })();
 
-    const p = productsData.map((productData) => {
-      const shoeData = {
-        name: productData.short_name,
-        price: productData.price_range.min.price,
-        assets: productData.assets,
-      };
+    setProducts(
+      productsData.map((productData) => {
+        const shoeData = {
+          name: productData.short_name,
+          price: productData.price_range.min.price,
+          assets: productData.assets,
+        };
 
-      return (
-        <Product
-          key={uniqid()}
-          shoeData={shoeData}
-          setTotalCartItems={setTotalCartItems}
-          totalCartItems={totalCartItems}
-          total={total}
-        />
-      );
-    });
-    setProducts(p);
+        return (
+          <Product
+            key={uniqid()}
+            shoeData={shoeData}
+            setTotalCartItems={setTotalCartItems}
+            totalCartItems={totalCartItems}
+            total={total}
+          />
+        );
+      })
+    );
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [productsData]);
 
