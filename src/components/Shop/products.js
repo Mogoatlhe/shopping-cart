@@ -1,45 +1,38 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import uniqid from "uniqid";
 import Cart from "./cart";
 import Product from "./product";
 
 const Products = () => {
+  const total = useRef(0);
   const [productsData, setProductsData] = useState([]);
+  const [products, setProducts] = useState([]);
   const [totalCartItems, setTotalCartItems] = useState(0);
 
-  let imageLink = `http://assets.superbalistcdn.co.za/`;
-
-  const updateCartItems = (operation) => {
-    const newTotal =
-      operation === "increment" ? totalCartItems + 1 : totalCartItems - 1;
-    setTotalCartItems(newTotal);
-  };
-
-  const changeBaseUrl = (response) => {
-    return response.search.data.map((data) => {
-      data.assets = data.assets.map((image) => {
-        image.base_url = `${imageLink}${data.asset.base_url.slice(-20)}`;
-        return image;
+  useEffect(() => {
+    const changeBaseUrl = (response) => {
+      let imageLink = `http://assets.superbalistcdn.co.za/`;
+      return response.search.data.map((data) => {
+        data.assets = data.assets.map((image) => {
+          image.base_url = `${imageLink}${data.asset.base_url.slice(-20)}`;
+          return image;
+        });
+        return data;
       });
-      return data;
-    });
-  };
+    };
 
-  const fetchData = async () => {
-    let response = await fetch(
-      "https://superbalist.com/api/public/es/catalogue?brand=converse&department=men&category=shoes&route=%7B%22path%22:%22%2Fbrands%2Fconverse%2Fmen%2Fshoes%22%7D"
-    );
+    (async () => {
+      let response = await fetch(
+        "https://superbalist.com/api/public/es/catalogue?brand=converse&department=men&category=shoes&route=%7B%22path%22:%22%2Fbrands%2Fconverse%2Fmen%2Fshoes%22%7D"
+      );
 
-    response = await response.json();
-    const data = changeBaseUrl(response);
+      response = await response.json();
+      const data = changeBaseUrl(response);
 
-    if (productsData.length === 0) setProductsData(data);
-  };
+      if (productsData.length === 0) setProductsData(data);
+    })();
 
-  fetchData();
-
-  const displayProducts = () => {
-    const products = productsData.map((productData) => {
+    const p = productsData.map((productData) => {
       const shoeData = {
         name: productData.short_name,
         price: productData.price_range.min.price,
@@ -50,18 +43,22 @@ const Products = () => {
         <Product
           key={uniqid()}
           shoeData={shoeData}
-          updateCartItems={updateCartItems}
+          setTotalCartItems={setTotalCartItems}
+          totalCartItems={totalCartItems}
+          total={total}
         />
       );
     });
+    setProducts(p);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [productsData]);
 
-    return products;
-  };
+  useEffect(() => {});
 
   return (
     <div id="products-container">
       <Cart totalCartItems={totalCartItems} />
-      {displayProducts().map((product) => product)}
+      {products}
     </div>
   );
 };
