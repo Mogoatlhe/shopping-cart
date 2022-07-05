@@ -43,7 +43,7 @@ An online shopping store created in `ReactJS`.
 
 ## prototype
 
-- Get an idea of how the finished product is ment to work
+- Get an idea of how the finished product is meant to work
   - https://www.figma.com/proto/YsOsWHq7tPiE9Vcy3N0Bah/shopping-cart?node-id=27%3A2&scaling=scale-down&page-id=0%3A1&starting-point-node-id=2%3A2
 
 ## Preview
