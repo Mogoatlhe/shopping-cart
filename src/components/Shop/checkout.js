@@ -16,8 +16,9 @@ const Checkout = () => {
             accumulator + Number(curr.price) * Number(curr.count),
           0
         );
-
         setTotal(tempTotal);
+      } else {
+        setTotal(0);
       }
     };
 
