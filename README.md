@@ -21,7 +21,7 @@ An online shopping store created in `ReactJS`.
 - [ ] create the not found page
   - [x] let all the other invalid /urls lead to the not found page
 - [x] fetch data from an API.
-- [ ] keep track of state values on page change / refresh
+- [x] keep track of state values on page change / refresh
 
 ## Design
 
