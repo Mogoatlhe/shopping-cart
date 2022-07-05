@@ -10,6 +10,13 @@ const Products = () => {
   const [totalCartItems, setTotalCartItems] = useState(0);
 
   useEffect(() => {
+    const getTotal = () => Number(localStorage.getItem("total"));
+
+    if (getTotal() !== 0) {
+      total.current = getTotal();
+      setTotalCartItems(getTotal());
+    }
+
     const changeBaseUrl = (response) => {
       let imageLink = `http://assets.superbalistcdn.co.za/`;
       return response.search.data.map((data) => {
