@@ -45,7 +45,6 @@ const Products = () => {
             key={uniqid()}
             shoeData={shoeData}
             setTotalCartItems={setTotalCartItems}
-            totalCartItems={totalCartItems}
             total={total}
           />
         );
@@ -53,8 +52,6 @@ const Products = () => {
     );
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [productsData]);
-
-  useEffect(() => {});
 
   return (
     <div id="products-container">
