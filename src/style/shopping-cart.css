@@ -190,4 +190,106 @@ button:hover{
 #cart-container *:hover{
   cursor: pointer;
 }
+
+#checkout-container{
+  position: fixed;
+  top: 0;
+  width: 98vw;
+  height: 100vh;
+}
+
+#checkout-wrapper{
+  position: relative;
+  left: 41vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 58vw;
+  background-color: white;
+  border-left: 1px solid var(--jet);
+}
+
+#close-checkout{
+  position: fixed;
+  width: 58vw;
+  height: 7vh;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#close-checkout-btn{
+  background-color: var(--jet);
+  height: 7vh;
+  width: 5vw;
+  color: var(--tea-green);
+  font-size: 1.3rem;
+  font-family: var(--uchen);
+}
+
+#close-checkout-btn:hover{
+  cursor: pointer;
+}
+
+#checkout-items-container{
+  position: absolute;
+  margin-top: 10vh;
+  width: 50vw;
+}
+
+#pay-details-container{
+  display: fixed;
+  margin-top: 50vh;
+  height: 60vh;
+  width: 58vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+  z-index: 2;
+  background-color: white;
+  border-left: 1px solid var(--jet);
+}
+
+#total-price-container{
+  width: 50vw;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1.8rem;
+  border-top: 1px solid var(--jet);
+  padding-top: 5px;
+}
+
+#pay-now-btn{
+  background-color: var(--jet);
+  width: 20vw;
+  padding: 5px 0;
+  border-radius: 7px;
+  font-family: var(--uchen);
+}
+
+#products-source-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--tea-green);
+  height: 20vh;
+  width: 100%;
+}
+
+#products-source-text{
+  width: 45vw;
+  font-size: 1.3rem;
+  color: var(--jet);
+  text-align: justify;
+}
+
+a{
+  text-decoration-color: var(--jet);
+}
+
+a:link:not(.link), a:visited:not(.link), a:active:not(.link){
+  color:var(--jet);
+}
 /* https: //www.google.com/imgres?imgurl=http%3A%2F%2F25.media.tumblr.com%2F06e4f035b3982b24550f01494249b2a2%2Ftumblr_n18r1t1TZz1tpegqko1_400.gif&imgrefurl=https%3A%2F%2Fwifflegif.com%2Ftags%2F46809-all-star-gifs%3Fpage%3D3&tbnid=rW3ANncm3WHGHM&vet=10CB4QxiAoBWoXChMIkMfwz97U-AIVAAAAAB0AAAAAEAs..i&docid=YSdEKa_P4f1qPM&w=400&h=258&itg=1&q=sneakers%20walking%20gif&ved=0CB4QxiAoBWoXChMIkMfwz97U-AIVAAAAAB0AAAAAEAs#imgrc=KpibYE5l51oZxM&imgdii=vHInGamn173kcM */
