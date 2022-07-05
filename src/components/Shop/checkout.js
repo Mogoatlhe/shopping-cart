@@ -1,7 +1,11 @@
 import { useEffect, useState } from "react";
+import uniqid from "uniqid";
+import CartItem from "./cartItem";
 
 const Checkout = () => {
   const [total, setTotal] = useState(0);
+  const [cartItems, setCartItems] = useState([]);
+
   useEffect(() => {
     let cartItems = JSON.parse(localStorage.getItem("cartItems"));
 
@@ -17,12 +21,20 @@ const Checkout = () => {
       }
     };
 
+    const displayCartItems = () => {
+      return cartItems.map((cartItem) => (
+        <CartItem key={uniqid()} cartItem={cartItem} />
+      ));
+    };
+
     const onStorageChange = () => {
       cartItems = JSON.parse(localStorage.getItem("cartItems"));
       setCheckout();
+      setCartItems(displayCartItems());
     };
 
     setCheckout();
+    setCartItems(displayCartItems());
 
     window.addEventListener("storage", onStorageChange);
 
@@ -37,7 +49,7 @@ const Checkout = () => {
         <div id="close-checkout">
           <button id="close-checkout-btn">X</button>
         </div>
-        <div id="checkout-items-container"></div>
+        <div id="checkout-items-container">{cartItems}</div>
         <div id="pay-details-container">
           <div id="total-price-container">
             <p>Total: R {total}</p>

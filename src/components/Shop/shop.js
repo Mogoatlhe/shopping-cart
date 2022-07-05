@@ -1,5 +1,5 @@
 import Nav from "../Nav/nav";
-import Checkout from "./Checkout/checkout";
+import Checkout from "./checkout";
 import Products from "./products";
 
 const Shop = () => {
