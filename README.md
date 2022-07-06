@@ -18,7 +18,7 @@ An online shopping store created in `ReactJS`.
 
 ## Additional Features
 
-- [ ] create the not found page
+- [x] create the not found page
   - [x] let all the other invalid /urls lead to the not found page
 - [x] fetch data from an API.
 - [x] keep track of state values on page change / refresh
