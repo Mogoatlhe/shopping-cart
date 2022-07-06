@@ -4,6 +4,7 @@ import CartItem from "./cartItem";
 
 const Checkout = () => {
   const [total, setTotal] = useState(0);
+  const [hidden, setHidden] = useState("hidden");
   const [cartItems, setCartItems] = useState([]);
 
   useEffect(() => {
@@ -18,6 +19,7 @@ const Checkout = () => {
         );
         setTotal(tempTotal);
       } else {
+        cartItems = [];
         setTotal(0);
       }
     };
@@ -45,7 +47,7 @@ const Checkout = () => {
   }, [total]);
 
   return (
-    <div id="checkout-container">
+    <div id="checkout-container" className={hidden}>
       <div id="checkout-wrapper">
         <div id="close-checkout">
           <button id="close-checkout-btn">X</button>
