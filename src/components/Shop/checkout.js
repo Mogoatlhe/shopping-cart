@@ -2,9 +2,8 @@ import { useEffect, useState } from "react";
 import uniqid from "uniqid";
 import CartItem from "./cartItem";
 
-const Checkout = () => {
+const Checkout = ({ hidden }) => {
   const [total, setTotal] = useState(0);
-  const [hidden, setHidden] = useState("hidden");
   const [cartItems, setCartItems] = useState([]);
 
   useEffect(() => {
