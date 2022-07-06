@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import uniqid from "uniqid";
 import CartItem from "./cartItem";
+import Swal from "sweetalert2";
 
 const Checkout = ({ hidden, setHidden }) => {
   const noItemsInCartText = (
@@ -8,6 +9,14 @@ const Checkout = ({ hidden, setHidden }) => {
   );
   const [total, setTotal] = useState(0);
   const [cartItems, setCartItems] = useState([]);
+
+  const processPurchase = () => {
+    Swal.fire({
+      icon: "success",
+      title: "Success",
+      text: "Purchase successful",
+    });
+  };
 
   useEffect(() => {
     let cartItems = JSON.parse(localStorage.getItem("cartItems"));
@@ -73,6 +82,7 @@ const Checkout = ({ hidden, setHidden }) => {
           <button
             id="pay-now-btn"
             style={{ visibility: cartItems.length > 0 ? "visible" : "hidden" }}
+            onClick={processPurchase}
           >
             Pay Now
           </button>

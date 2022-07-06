@@ -379,4 +379,13 @@ a:link:not(.link), a:visited:not(.link), a:active:not(.link){
   font-size: 1.5rem;
   color: var(--jet);
 }
+
+.swal2-popup{
+  background-color: var(--jet) !important;
+  color: white !important;
+}
+
+.swal2-confirm{
+  width: 10vw !important;
+}
 /* https: //www.google.com/imgres?imgurl=http%3A%2F%2F25.media.tumblr.com%2F06e4f035b3982b24550f01494249b2a2%2Ftumblr_n18r1t1TZz1tpegqko1_400.gif&imgrefurl=https%3A%2F%2Fwifflegif.com%2Ftags%2F46809-all-star-gifs%3Fpage%3D3&tbnid=rW3ANncm3WHGHM&vet=10CB4QxiAoBWoXChMIkMfwz97U-AIVAAAAAB0AAAAAEAs..i&docid=YSdEKa_P4f1qPM&w=400&h=258&itg=1&q=sneakers%20walking%20gif&ved=0CB4QxiAoBWoXChMIkMfwz97U-AIVAAAAAB0AAAAAEAs#imgrc=KpibYE5l51oZxM&imgdii=vHInGamn173kcM */
