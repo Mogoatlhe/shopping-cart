@@ -3,7 +3,7 @@ import uniqid from "uniqid";
 import CartItem from "./cartItem";
 import Swal from "sweetalert2";
 
-const Checkout = ({ hidden, setHidden }) => {
+const Checkout = ({ hidden, setHidden, setTotalCartItems }) => {
   const noItemsInCartText = (
     <p id="empty-cart">No Items in Cart, BrokeBwoooiii</p>
   );
@@ -11,6 +11,8 @@ const Checkout = ({ hidden, setHidden }) => {
   const [cartItems, setCartItems] = useState([]);
 
   const processPurchase = () => {
+    localStorage.clear();
+    setTotalCartItems(0);
     document.getElementById("close-checkout-btn").click();
     Swal.fire({
       icon: "success",

@@ -60,7 +60,7 @@ const Products = () => {
       })
     );
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [productsData]);
+  }, [productsData, totalCartItems]);
 
   return (
     <>
@@ -71,7 +71,11 @@ const Products = () => {
         <Cart totalCartItems={totalCartItems} setHidden={setHidden} />
         {products}
       </div>
-      <Checkout hidden={hidden} setHidden={setHidden} />
+      <Checkout
+        hidden={hidden}
+        setHidden={setHidden}
+        setTotalCartItems={setTotalCartItems}
+      />
     </>
   );
 };
