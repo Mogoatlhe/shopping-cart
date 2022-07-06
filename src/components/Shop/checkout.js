@@ -11,6 +11,7 @@ const Checkout = ({ hidden, setHidden }) => {
   const [cartItems, setCartItems] = useState([]);
 
   const processPurchase = () => {
+    document.getElementById("close-checkout-btn").click();
     Swal.fire({
       icon: "success",
       title: "Success",
