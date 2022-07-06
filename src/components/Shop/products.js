@@ -75,6 +75,7 @@ const Products = () => {
         hidden={hidden}
         setHidden={setHidden}
         setTotalCartItems={setTotalCartItems}
+        overall={total}
       />
     </>
   );

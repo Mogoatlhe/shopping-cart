@@ -3,7 +3,7 @@ import uniqid from "uniqid";
 import CartItem from "./cartItem";
 import Swal from "sweetalert2";
 
-const Checkout = ({ hidden, setHidden, setTotalCartItems }) => {
+const Checkout = ({ hidden, setHidden, setTotalCartItems, overall }) => {
   const noItemsInCartText = (
     <p id="empty-cart">No Items in Cart, BrokeBwoooiii</p>
   );
@@ -34,6 +34,7 @@ const Checkout = ({ hidden, setHidden, setTotalCartItems }) => {
         setTotal(tempTotal);
       } else {
         cartItems = [];
+        overall.current = 0;
         setTotal(0);
       }
     };
@@ -58,6 +59,7 @@ const Checkout = ({ hidden, setHidden, setTotalCartItems }) => {
     return () => {
       window.removeEventListener("storage", onStorageChange);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [total, hidden]);
 
   const hideCheckout = (e) => {
