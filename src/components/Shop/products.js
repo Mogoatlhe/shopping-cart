@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import uniqid from "uniqid";
 import Cart from "./cart";
+import Checkout from "./checkout";
 import Product from "./product";
 
 const Products = () => {
@@ -64,6 +65,7 @@ const Products = () => {
     <div id="products-container">
       <Cart totalCartItems={totalCartItems} />
       {products}
+      <Checkout />
     </div>
   );
 };
