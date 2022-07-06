@@ -60,7 +60,10 @@ const Checkout = ({ hidden, setHidden, setTotalCartItems }) => {
     };
   }, [total, hidden]);
 
-  const hideCheckout = () => {
+  const hideCheckout = (e) => {
+    if (e.target !== e.currentTarget) {
+      return;
+    }
     setHidden("hidden");
   };
   return (
@@ -68,6 +71,7 @@ const Checkout = ({ hidden, setHidden, setTotalCartItems }) => {
       id="checkout-container"
       data-testid="checkout-container"
       className={hidden}
+      onClick={hideCheckout}
     >
       <div id="checkout-wrapper">
         <div id="close-checkout">
