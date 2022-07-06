@@ -70,7 +70,12 @@ const Checkout = ({ hidden, setHidden }) => {
           <div id="total-price-container">
             <p>Total: R {total}</p>
           </div>
-          <button id="pay-now-btn">Pay Now</button>
+          <button
+            id="pay-now-btn"
+            style={{ visibility: cartItems.length > 0 ? "visible" : "hidden" }}
+          >
+            Pay Now
+          </button>
           <div id="products-source-container">
             <p id="products-source-text">
               All the products listed here can be bought at these exact prices
