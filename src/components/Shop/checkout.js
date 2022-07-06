@@ -47,7 +47,11 @@ const Checkout = () => {
   }, [total]);
 
   return (
-    <div id="checkout-container" className={hidden}>
+    <div
+      id="checkout-container"
+      data-testid="checkout-container"
+      className={hidden}
+    >
       <div id="checkout-wrapper">
         <div id="close-checkout">
           <button id="close-checkout-btn">X</button>
