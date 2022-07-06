@@ -209,7 +209,7 @@ button:hover{
 
 #checkout-wrapper{
   position: relative;
-  left: 41vw;
+  left: 20vw;
   height: 100vh;
   display: flex;
   flex-direction: column;

@@ -9,6 +9,7 @@ const Products = () => {
   const [productsData, setProductsData] = useState([]);
   const [products, setProducts] = useState([]);
   const [totalCartItems, setTotalCartItems] = useState(0);
+  const [hidden, setHidden] = useState("hidden");
 
   useEffect(() => {
     const getTotal = () => Number(localStorage.getItem("total"));
@@ -63,9 +64,9 @@ const Products = () => {
 
   return (
     <div id="products-container">
-      <Cart totalCartItems={totalCartItems} />
+      <Cart totalCartItems={totalCartItems} setHidden={setHidden} />
       {products}
-      <Checkout />
+      <Checkout hidden={hidden} />
     </div>
   );
 };

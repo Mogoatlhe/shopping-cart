@@ -43,7 +43,7 @@ const Checkout = ({ hidden }) => {
     return () => {
       window.removeEventListener("storage", onStorageChange);
     };
-  }, [total]);
+  }, [total, hidden]);
 
   return (
     <div
