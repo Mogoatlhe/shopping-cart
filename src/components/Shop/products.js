@@ -63,11 +63,16 @@ const Products = () => {
   }, [productsData]);
 
   return (
-    <div id="products-container">
-      <Cart totalCartItems={totalCartItems} setHidden={setHidden} />
-      {products}
+    <>
+      <div
+        id="products-container"
+        style={{ display: hidden === "hidden" ? "flex" : "none" }}
+      >
+        <Cart totalCartItems={totalCartItems} setHidden={setHidden} />
+        {products}
+      </div>
       <Checkout hidden={hidden} />
-    </div>
+    </>
   );
 };
 
