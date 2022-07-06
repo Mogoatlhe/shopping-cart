@@ -6,6 +6,7 @@ const Nav = ({ page }) => {
   const [homeClass, setHomeClass] = useState("");
   const [shopClass, setShopClass] = useState("");
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (page === "home") {
       setHomeClass("active");
