@@ -61,6 +61,15 @@ describe("cart button works", () => {
     const checkoutContainer = screen.getByTestId("checkout-container");
     expect(checkoutContainer).not.toHaveClass("hidden");
   });
+
+  it("cart icon button shows checkout when clicked", () => {
+    render(getProducts());
+    const allButtons = screen.getAllByRole("button");
+    const cartIconButton = allButtons[0];
+    fireEvent.click(cartIconButton);
+    const checkoutContainer = screen.getByTestId("checkout-container");
+    expect(checkoutContainer).not.toHaveClass("hidden");
+  });
   // it("test initial cart item state", () => {
   //   render(<Products totalCartItems={0} />);
   //   expect(cartItemValue).toHaveTextContent("( 0 )");
