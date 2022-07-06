@@ -171,6 +171,8 @@ button:hover{
 }
 
 #cart-container{
+  display: flex;
+  justify-content: flex-end;
   position: fixed;
   top: 0;
   width: 57vw;
@@ -179,12 +181,19 @@ button:hover{
 }
 
 #cart-container *{
+  width: fit-content;
   height: 100%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 1%;
+  gap: 5%;
   font-size: 1.2rem;
+  background-color: white;
+  color: black;
+}
+
+#cart-container button svg{
+  width: 27%;
 }
 
 #cart-container *:hover{
