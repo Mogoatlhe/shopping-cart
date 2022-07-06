@@ -3,6 +3,9 @@ import uniqid from "uniqid";
 import CartItem from "./cartItem";
 
 const Checkout = ({ hidden, setHidden }) => {
+  const noItemsInCartText = (
+    <p id="empty-cart">No Items in Cart, BrokeBwoooiii</p>
+  );
   const [total, setTotal] = useState(0);
   const [cartItems, setCartItems] = useState([]);
 
@@ -60,7 +63,9 @@ const Checkout = ({ hidden, setHidden }) => {
             X
           </button>
         </div>
-        <div id="checkout-items-container">{cartItems}</div>
+        <div id="checkout-items-container">
+          {cartItems.length > 0 ? cartItems : noItemsInCartText}
+        </div>
         <div id="pay-details-container">
           <div id="total-price-container">
             <p>Total: R {total}</p>
