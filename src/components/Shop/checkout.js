@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import uniqid from "uniqid";
 import CartItem from "./cartItem";
 
-const Checkout = ({ hidden }) => {
+const Checkout = ({ hidden, setHidden }) => {
   const [total, setTotal] = useState(0);
   const [cartItems, setCartItems] = useState([]);
 
@@ -45,6 +45,9 @@ const Checkout = ({ hidden }) => {
     };
   }, [total, hidden]);
 
+  const hideCheckout = () => {
+    setHidden("hidden");
+  };
   return (
     <div
       id="checkout-container"
@@ -53,7 +56,9 @@ const Checkout = ({ hidden }) => {
     >
       <div id="checkout-wrapper">
         <div id="close-checkout">
-          <button id="close-checkout-btn">X</button>
+          <button id="close-checkout-btn" onClick={hideCheckout}>
+            X
+          </button>
         </div>
         <div id="checkout-items-container">{cartItems}</div>
         <div id="pay-details-container">

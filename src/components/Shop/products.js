@@ -71,7 +71,7 @@ const Products = () => {
         <Cart totalCartItems={totalCartItems} setHidden={setHidden} />
         {products}
       </div>
-      <Checkout hidden={hidden} />
+      <Checkout hidden={hidden} setHidden={setHidden} />
     </>
   );
 };
