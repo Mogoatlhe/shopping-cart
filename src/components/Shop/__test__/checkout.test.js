@@ -61,29 +61,32 @@ describe("cart button works", () => {
     const checkoutContainer = screen.getByTestId("checkout-container");
     expect(checkoutContainer).not.toHaveClass("hidden");
   });
+});
 
-  it("cart icon button shows checkout when clicked", () => {
+describe("close cart", () => {
+  it("close cart button is in the document", () => {
+    render(getProducts());
+    const closeCartBtn = screen.getByText("X");
+    expect(closeCartBtn).toHaveAttribute("id", "close-checkout-btn");
+  });
+
+  it("close cart button closes the cart", () => {
     render(getProducts());
     const allButtons = screen.getAllByRole("button");
     const cartIconButton = allButtons[0];
     fireEvent.click(cartIconButton);
+    const closeCartBtn = screen.getByText("X");
+    fireEvent.click(closeCartBtn);
     const checkoutContainer = screen.getByTestId("checkout-container");
-    expect(checkoutContainer).not.toHaveClass("hidden");
+    expect(checkoutContainer).toHaveClass("hidden");
   });
-  // it("test initial cart item state", () => {
-  //   render(<Products totalCartItems={0} />);
-  //   expect(cartItemValue).toHaveTextContent("( 0 )");
+
+  // it("cart icon button shows checkout when clicked", () => {
+  //   render(getProducts());
+  //   const allButtons = screen.getAllByRole("button");
+  //   const cartIconButton = allButtons[0];
+  //   fireEvent.click(cartIconButton);
+  //   const checkoutContainer = screen.getByTestId("checkout-container");
+  //   expect(checkoutContainer).not.toHaveClass("hidden");
   // });
 });
-
-// describe("update cart items total value", () => {
-//   it("update cart item count value", async () => {
-//     render(<Products totalCartItems={0} />);
-
-//     // eslint-disable-next-line testing-library/prefer-find-by
-//     const addToCartButton = await waitFor(() => screen.getByText("+"));
-//     fireEvent.click(addToCartButton);
-//     const cartItemValue = screen.getByTestId("cart-items-total");
-//     expect(cartItemValue).toHaveTextContent("( 1 )");
-//   });
-// });
