@@ -21,10 +21,10 @@ const Nav = ({ page }) => {
 
   return (
     <nav>
-      <Link to="/" className={`link ${homeClass}`}>
+      <Link to="/shopping-cart/" className={`link ${homeClass}`}>
         HOME
       </Link>
-      <Link to="/shop" className={`link ${shopClass}`}>
+      <Link to="/shopping-cart/shop" className={`link ${shopClass}`}>
         SHOP
       </Link>
     </nav>
