@@ -3,7 +3,7 @@ import { HiOutlineShoppingCart } from "react-icons/hi";
 const Cart = ({ totalCartItems }) => {
   return (
     <div id="cart-container">
-      <button>
+      <button id="cart-button">
         <HiOutlineShoppingCart />
         <p data-testid="cart-items-total">( {totalCartItems} )</p>
       </button>
