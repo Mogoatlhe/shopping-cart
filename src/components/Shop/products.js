@@ -3,6 +3,7 @@ import uniqid from "uniqid";
 import Cart from "./cart";
 import Checkout from "./checkout";
 import Product from "./product";
+import Loading from "./loading";
 
 const Products = () => {
   const total = useRef(0);
@@ -10,6 +11,7 @@ const Products = () => {
   const [products, setProducts] = useState([]);
   const [totalCartItems, setTotalCartItems] = useState(0);
   const [hidden, setHidden] = useState("hidden");
+  const [loading, setLoading] = useState("hidden");
 
   useEffect(() => {
     const getTotal = () => Number(localStorage.getItem("total"));
@@ -31,6 +33,7 @@ const Products = () => {
     };
 
     (async () => {
+      setLoading("");
       let response = await fetch(
         "https://my-cors-proxy-sc.fly.dev/https://superbalist.com/api/public/es/catalogue?brand=converse&department=men&category=shoes&route=%7B%22path%22:%22%2Fbrands%2Fconverse%2Fmen%2Fshoes%22%7D"
       );
@@ -39,6 +42,7 @@ const Products = () => {
       const data = changeBaseUrl(response);
 
       if (productsData.length === 0) setProductsData(data);
+      setLoading("hidden");
     })();
 
     setProducts(
@@ -71,6 +75,7 @@ const Products = () => {
         <Cart totalCartItems={totalCartItems} setHidden={setHidden} />
         {products}
       </div>
+      <Loading hidden={loading} />
       <Checkout
         hidden={hidden}
         setHidden={setHidden}
