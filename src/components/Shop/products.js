@@ -35,7 +35,7 @@ const Products = () => {
     (async () => {
       setLoading("");
       let response = await fetch(
-        "https://my-cors-proxy-sc.fly.dev/https://superbalist.com/api/public/es/catalogue?brand=converse&department=men&category=shoes&route=%7B%22path%22:%22%2Fbrands%2Fconverse%2Fmen%2Fshoes%22%7D"
+        "https://ofplbackend-production.up.railway.app/superbalist-converse"
       );
 
       response = await response.json();
