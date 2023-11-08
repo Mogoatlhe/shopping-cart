@@ -64,7 +64,7 @@ const Products = () => {
       })
     );
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [productsData, totalCartItems]);
+  }, [productsData]);
 
   return (
     <>
