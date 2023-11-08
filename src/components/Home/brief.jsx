@@ -13,7 +13,7 @@ const Brief = () => {
         <p className="home-page-text">Asikhulume</p>
         <p className="home-page-text">Let's Talk</p>
         <p className="home-page-text">Get your Converse</p>
-        <Link to="/shopping-cart/shop" className="link">
+        <Link to="/shop" className="link">
           <p className="home-page-text call-to-action">Here Now</p>
         </Link>
       </div>

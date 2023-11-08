@@ -22,10 +22,10 @@ const Nav = ({ page }) => {
 
   return (
     <nav>
-      <Link to="/shopping-cart/" className={`link ${homeClass}`}>
+      <Link to="/" className={`link ${homeClass}`}>
         HOME
       </Link>
-      <Link to="/shopping-cart/shop" className={`link ${shopClass}`}>
+      <Link to="/shop" className={`link ${shopClass}`}>
         SHOP
       </Link>
     </nav>
