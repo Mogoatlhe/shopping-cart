@@ -4,7 +4,7 @@ An online shopping store created in `ReactJS`.
 
 ## Core Features
 
-- [ ] at least two pages
+- [x] at least two pages
   - [x] homepage
   - [x] shopping page, must:
     - [x] include a shopping cart
