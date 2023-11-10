@@ -25,7 +25,6 @@ const Product = ({ shoeData, setTotalCartItems, total }) => {
       setHidden("");
       setCartCount(item.count);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const incrementCartCount = () => {

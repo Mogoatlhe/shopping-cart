@@ -14,11 +14,11 @@ const Products = () => {
   const [loading, setLoading] = useState("hidden");
 
   useEffect(() => {
-    const getTotal = () => Number(localStorage.getItem("total"));
+    const totalAmount = Number(localStorage.getItem("total"));
 
-    if (getTotal() !== 0) {
-      total.current = getTotal();
-      setTotalCartItems(getTotal());
+    if (totalAmount !== 0) {
+      total.current = totalAmount;
+      setTotalCartItems(totalAmount);
     }
 
     const changeBaseUrl = (response) => {
@@ -63,7 +63,6 @@ const Products = () => {
         );
       })
     );
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [productsData]);
 
   return (
