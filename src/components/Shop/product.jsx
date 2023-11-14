@@ -15,7 +15,7 @@ const Product = ({ shoeData, setTotalCartItems, total }) => {
   };
 
   useEffect(() => {
-    const items = JSON.parse(localStorage.getItem("cartItems"));
+    const items = getJSON();
     if (items !== null && items.length > 0) {
       const item = items.find((el) => el.name === shoeData.name);
       if (item === undefined) {
