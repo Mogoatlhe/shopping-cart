@@ -1,31 +1,13 @@
-import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "../../style/nav.css";
 
 const Nav = ({ page }) => {
-  const [homeClass, setHomeClass] = useState("");
-  const [shopClass, setShopClass] = useState("");
-
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  useEffect(() => {
-    if (page === "home") {
-      setHomeClass("active");
-      setShopClass("");
-    } else if (page === "shop") {
-      setHomeClass("");
-      setShopClass("active");
-    } else {
-      setHomeClass("");
-      setShopClass("");
-    }
-  });
-
   return (
     <nav>
-      <Link to="/" className={`link ${homeClass}`}>
+      <Link to="/" className={`link ${page === "home" ? "active" : ""}`}>
         HOME
       </Link>
-      <Link to="/shop" className={`link ${shopClass}`}>
+      <Link to="/shop" className={`link ${page === "shop" ? "active" : ""}`}>
         SHOP
       </Link>
     </nav>
