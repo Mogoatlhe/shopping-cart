@@ -30,18 +30,17 @@ const Product = ({ shoeData, setTotalCartItems, total }) => {
   const incrementCartCount = () => {
     setHidden("");
     setCartCount(cartCount + 1);
-    const cartItems = getJSON() === null ? [] : getJSON();
 
-    if (cartItems.length === 0) {
+    let cartItems = getJSON();
+    cartItems = cartItems === null ? [] : cartItems;
+    const index = cartItems.findIndex((item) => item.name === shoeData.name);
+
+    if (index === -1) {
       cartItems.push(addCartItem());
     } else {
-      const index = getJSON().findIndex((item) => item.name === shoeData.name);
-      if (index === -1) {
-        cartItems.push(addCartItem());
-      } else {
-        cartItems[index].count += 1;
-      }
+      cartItems[index].count += 1;
     }
+
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
 
     setTotalCartItems(++total.current);
@@ -54,12 +53,17 @@ const Product = ({ shoeData, setTotalCartItems, total }) => {
     } else if (cartCount === 1) {
       setHidden("hidden");
     }
-    const cartItems = getJSON() === null ? [] : getJSON();
-    const index = getJSON().findIndex((item) => item.name === shoeData.name);
+
+    let cartItems = getJSON();
+    cartItems = cartItems === null ? [] : cartItems;
+
+    const index = cartItems.findIndex((item) => item.name === shoeData.name);
+
     cartItems[index].count -= 1;
     if (cartItems[index].count === 0) {
       cartItems.splice(index, 1);
     }
+
     setTotalCartItems(--total.current);
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
     setCartCount(cartCount - 1);
